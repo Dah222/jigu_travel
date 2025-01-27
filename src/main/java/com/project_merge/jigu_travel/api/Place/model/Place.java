@@ -1,6 +1,5 @@
-package com.project_merge.jigu_travel.api.Place.entity;
+package com.project_merge.jigu_travel.api.Place.model;
 
-import com.project_merge.jigu_travel.global.common.PlaceType;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -36,6 +35,9 @@ public class Place {
 
     @Column(nullable = false, length = 50)
     private String address; // 주소
+
+    private LocalDateTime opened; // 개방 시간
+    private LocalDateTime closed; // 마감 시간
 
     @Column(nullable = false)
     private boolean deleted = false; // 폐업 여부 (기본값: false)
